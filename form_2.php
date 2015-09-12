@@ -287,5 +287,7 @@ $("#txtcomo_entero").val("");
 $("#txtcolegio").val("");
 
 }
+
+cambiolines
 </script>
 </html>
