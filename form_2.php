@@ -285,6 +285,8 @@ $("#txttelefono_celular").val("");
 $("#txtemail").val("");
 $("#txtcomo_entero").val("");
 $("#txtcolegio").val("");
+prueba de cambio
+
 
 }
 
