@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| Application Routes
+| Application Routes - Actualizado
 |--------------------------------------------------------------------------
 |
 | Here is where you can register all of the routes for an application.
@@ -194,7 +194,7 @@ Route::post('/guardar_gruposfocales',function(){
 });
 
 // ######################################################
-// ################# RUTAS PARA OBSERVACIÓN   ###########
+// ################# RUTAS PARA OBSERVACIï¿½N   ###########
 // ################# autor: JULIAN ALBERTO BALESTEROS####
 // ######################################################
 Route::post('/buscar_observacion',function(){
