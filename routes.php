@@ -1037,6 +1037,7 @@ Route::post('/login2', function()
 				  where us.usuario='$usuario' and us.password=password('$password') and us.perfil_fk=$perfil";
 		$results = DB::select($sql_uni);	
 
+		
 
 		
 		$nombre_perfil="";
