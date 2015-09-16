@@ -42,6 +42,7 @@ Route::get('/home2', function()
 
 Route::get('/login', function()
 {
+	Session::put('empresa', "1");//por defecto para la udi
 	$vista_formularios = View::make('login.index');
 
 	$perfiles_controller=new PerfilesController();
