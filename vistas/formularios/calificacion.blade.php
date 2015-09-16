@@ -24,48 +24,34 @@
                                     
                                     <!-- Código -->
                            
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Programa</label>
+                                        <div class="col-md-9">                                                                                
+                                            <select class="form-control select" data-live-search="true" id="fiprograma" onchange="buscar_modelo()">
+                                            <option value="">Ninguno</option> 
+                                             @foreach ($arra_programas as $programa) 
+                                                <option value="{{$programa->codigo}}">{{$programa->nombre}}</option>                                                
+                                              @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+
 
 
                                      <div class="form-group">
                                         <label class="col-md-3 control-label">Modelo</label>
                                         <div class="col-md-9">                                                                                
-                                            <select class="form-control select" data-live-search="true" id="fimodelo" onchange="buscar_factores('')">
-                                            <option value="">Ninguno</option> 
-                                             @foreach ($arra_modelos as $modelo) 
-                                                
-                                                <option value="{{$modelo->codigo}}">{{$modelo->nombre}}</option>                                                
-                                              @endforeach
+                                            <select class="form-control select" data-live-search="true" id="fimodelo">
+                                            
                                             </select>
                                         </div>
                                     </div>
                                     
 
 
-                                     <div class="form-group">
-                                        <label class="col-md-3 control-label">Estamento</label>
-                                        <div class="col-md-9">                                                                                
-                                            <select class="form-control select" data-live-search="true" id="fiestamento">
-                                            <option value="">Ninguno</option> 
-                                             @foreach ($arra_estamentos as $estamentos) 
-                                                <option value="{{$estamentos->codigo}}">{{$estamentos->nombre}}</option>                                                
-                                              @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
+                                     
 
-                                     <!-- Nombre -->
-                                     <div class="form-group">
-                                        <label class="col-md-3 control-label">Nombre</label>
-                                        <div class="col-md-9">                                            
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
-                                                <input type="text" id="finombre" class="form-control"/>
-                                            </div>                                            
-                                            <span class="help-block">Nombre de la encuesta</span>
-                                        </div>
-                                    </div>
-
-                                   
+                                                                        
 
                                      <button class="btn btn-info pull-right" id="btnagregar" onclick="cargar_listado()" >Filtrar >> </button>
 
@@ -250,18 +236,61 @@
          //agregar_indicador();
     });  
 
-    
+     function buscar_modelo(){
+        var programa=$("#fiprograma").val();
+      
+
+        var request = $.ajax({
+          url: "buscar_modelo_programa",
+          type: "POST",
+          data:{
+            codigo:"",
+            programa:""+programa,
+            modelo:"",
+            tipo_result:"json"
+          }
+        });        
+
+        request.done(function(obj) { 
+              
+       
+          if( obj.status == "ok"){     
+            var i=0;          
+           var dato_factor=obj.datos;
+            var cadena_combo="";
+             for(i=0;i<dato_factor.length;i++){
+                cadena_combo+=' <option value="'+dato_factor[i].modelo_fk+'" " >'+dato_factor[i].modelo+'</option>';
+               
+             }
+
+             if(programa==""){
+                cadena_combo=' <option value="">Ninguno</option>';
+             }
+             $("#fimodelo").html(""+cadena_combo).selectpicker('refresh');  
+
+            
+
+
+          }else{
+            
+
+            $("#message-box-sound-2").show();
+            $("#mensaje_error").html(""+obj.mensaje);
+          }
+
+        });
+    }
 
     var datos_modelos=new Object();
 
    
-    function get_calificacion(valor,script){
+    function get_calificacion(valor,script,cantidad){
         var calificacion=0;
 		if(script==1){
 			calificacion=valor;	
         }  
 console.log(valor+"   script "+script);		
-        if(script==2){
+        if(script==2 || script==29){
             if(valor<=9.4){
                 calificacion=1;
             }else if(valor>=9.5  && valor<=18.8){
@@ -288,6 +317,48 @@ console.log(valor+"   script "+script);
 			calificacion=valor;	
         }  
 
+
+        if(script==7){
+            if(valor<5){
+                calificacion=1;
+            }else if(valor>=5  && valor<=14.99){
+                 calificacion=3;
+            }else if(valor>=15  && valor<=24.99){
+                 calificacion=7;
+            }else if(valor>=25){
+                 calificacion=10;
+            }
+        }
+
+        if(script==32){
+            if(valor<3){
+                calificacion=1;
+            }else if(valor>=3  && valor<=4.99){
+                 calificacion=3;
+            }else if(valor>=5  && valor<=6.99){
+                 calificacion=5;
+            }else if(valor>=7  && valor<=9.99){
+                 calificacion=7;
+            }else if(valor>=10){
+                 calificacion=10;
+            }
+        }
+
+        if(script==23){
+            if(cantidad==0){
+                calificacion=1;
+            }
+            if(cantidad==1){
+                calificacion=3;
+            }
+             if(cantidad==3){
+                calificacion=7;
+            }
+            if(cantidad>3){
+                calificacion=10;
+            }
+        }
+
         return calificacion;
     }
    
@@ -296,6 +367,7 @@ console.log(valor+"   script "+script);
         var codigo=$("#txtcodigo").val();
         var nombre=$("#txtnombre").val();
         var modelo=$("#fimodelo").val();
+       
 
       
         var script="";
@@ -374,7 +446,7 @@ console.log(valor+"   script "+script);
                 cadena_tabla+='<td style="width:20% !important; text-align:center;">'+datos_modelos[i].cantidad+'    </td>';
                 cadena_tabla+='<td style="width:20% !important; text-align:center;">'+datos_modelos[i].verdaderas+'    </td>';
                 cadena_tabla+='<td style="width:20% !important; text-align:center;">'+porcentaje+'    </td>';
-                cadena_tabla+='<td style="width:20% !important; text-align:center;">'+get_calificacion(porcentaje,datos_modelos[i].scripts_fk)+'    </td>';
+                cadena_tabla+='<td style="width:20% !important; text-align:center;">'+get_calificacion(porcentaje,datos_modelos[i].scripts_fk,datos_modelos[i].cantidad)+'    </td>';
                
                
                 cadena_tabla+=' </tr>';
