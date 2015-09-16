@@ -415,6 +415,8 @@ console.log(valor+"   script "+script);
              for(i=0;i<datos_modelos.length;i++){
 
                 var porcentaje=0;
+                var porcentaje2=0;
+
                 var calificacion=0;
 				if (datos_modelos[i].tipo_indicador==6){// Existencias (si/no)
 					porcentaje=datos_modelos[i].verdaderas;
@@ -436,6 +438,17 @@ console.log(valor+"   script "+script);
                     	porcentaje=(datos_modelos[i].verdaderas*100)/datos_modelos[i].cantidad;
                 	}
 				}
+
+                if(datos_modelos[i].scripts_fk==7){
+                    if(datos_modelos[i].cantidad>0){//encuestas
+                        porcentaje2=(datos_modelos[i].verdaderas*100)/datos_modelos[i].cantidad;
+                    }
+
+                    var promedio=(porcentaje+porcentaje2)/2;
+
+                    porcentaje=promedio;
+
+                }
 
                 
                 
