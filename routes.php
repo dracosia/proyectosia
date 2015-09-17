@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| Application Routes - Actualizado
+| Application Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register all of the routes for an application.
@@ -195,7 +195,7 @@ Route::post('/guardar_gruposfocales',function(){
 });
 
 // ######################################################
-// ################# RUTAS PARA OBSERVACI�N   ###########
+// ################# RUTAS PARA OBSERVACIÓN   ###########
 // ################# autor: JULIAN ALBERTO BALESTEROS####
 // ######################################################
 Route::post('/buscar_observacion',function(){
@@ -1038,7 +1038,6 @@ Route::post('/login2', function()
 				  where us.usuario='$usuario' and us.password=password('$password') and us.perfil_fk=$perfil";
 		$results = DB::select($sql_uni);	
 
-		
 
 		
 		$nombre_perfil="";
