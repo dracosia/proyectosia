@@ -62,6 +62,966 @@ Route::get('/login', function()
 });
 
 // ######################################################
+// ################# RUTAS PARA IND6221      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_6221',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind6221Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_6221',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind6221Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND6142      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_6142',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind6142Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_6142',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind6142Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+// ######################################################
+// ################# RUTAS PARA IND6141      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_6141',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind6141Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_6141',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind6141Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+// ######################################################
+// ################# RUTAS PARA IND5271      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_5271',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind5271Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_5271',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind5271Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND5252      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_5252',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind5252Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_5252',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind5252Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+// ######################################################
+// ################# RUTAS PARA IND5251      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_5251',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind5251Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_5251',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind5251Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+// ######################################################
+// ################# RUTAS PARA IND5241      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_5241',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind5241Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_5241',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind5241Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND5221      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_5221',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind5221Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_5221',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind5221Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+// ######################################################
+// ################# RUTAS PARA IND5153      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_5153',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind5153Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_5153',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind5153Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+
+// ######################################################
+// ################# RUTAS PARA IND5152      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_5152',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind5152Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_5152',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind5152Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND5151      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_5151',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind5151Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_5151',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind5151Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+// ######################################################
+// ################# RUTAS PARA IND4861      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_4861',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind4861Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_4861',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind4861Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND4821      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_4821',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind4821Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_4821',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind4821Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND4651      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_4651',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind4651Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_4651',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind4651Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+
+// ######################################################
+// ################# RUTAS PARA IND3632      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3632',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3632Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3632',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3632Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND3631      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3631',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3631Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3631',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3631Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+// ######################################################
+// ################# RUTAS PARA IND3612      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3612',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3612Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3612',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3612Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND3611      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3611',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3611Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3611',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3611Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND3422      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3422',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3422Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3422',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3422Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND3343      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3421',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3421Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3421',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3421Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND3343      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3343',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3343Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3343',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3343Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND3342      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3342',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3342Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3342',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3342Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND3341      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3341',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3341Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3341',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3341Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND3336      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3336',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3336Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3336',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3336Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND3335      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3335',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3335Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3335',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3335Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND3334      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3334',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3334Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3334',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3334Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+
+// ######################################################
+// ################# RUTAS PARA IND3333      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3333',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3333Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3333',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3333Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND3332      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3332',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3332Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3332',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3332Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND3331      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3331',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3331Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3331',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3331Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND3321c      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3321c',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3321cController();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3321c',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3321cController();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND3321b      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3321b',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3321bController();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3321b',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3321bController();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+
+// ######################################################
+// ################# RUTAS PARA IND3321a      ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3321a',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3321aController();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3321a',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3321aController();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND3231       ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_3231',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3231Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_3231',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind3231Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+// ######################################################
+// ################# RUTAS PARA IND2236       ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_2236',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind2236Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_2236',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind2236Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND2235       ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_2235',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind2235Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_2235',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind2235Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+// ######################################################
+// ################# RUTAS PARA IND2122       ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_2122',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind2122Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_2122',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind2122Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+
+// ######################################################
+// ################# RUTAS PARA IND2121       ###########
+// ################# autor: JULIAN ALBERTO BALESTEROS####
+// ######################################################
+Route::post('/buscar_2121',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind2121Controller();
+		
+		return $pagina_controller->buscar($arrainput);
+		
+	}	
+});
+
+Route::post('/guardar_2121',function(){
+	if(Request::ajax()){
+		$arrainput=array();
+		$arrainput=Input::all();
+
+		$pagina_controller=new ind2121Controller();		
+		return $pagina_controller->guardar($arrainput);
+	}	
+});
+
+
+// ######################################################
 // ########## RUTAS PARA CONFIGURACION ENCUESTA##########
 // ################# autor: JULIAN ALBERTO BALESTEROS####
 // ######################################################
