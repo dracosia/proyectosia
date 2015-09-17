@@ -290,7 +290,7 @@
 			calificacion=valor;	
         }  
 console.log(valor+"   script "+script);		
-        if(script==2 || script==29){
+        if(script==2 || script==29 || script==6){
             if(valor<=9.4){
                 calificacion=1;
             }else if(valor>=9.5  && valor<=18.8){
