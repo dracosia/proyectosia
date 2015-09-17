@@ -112,7 +112,7 @@ class ind2121Controller extends BaseController {
 			$c4=$arrainput['c4'];
 			$c5=$arrainput['c5'];
 			$estado=$arrainput['estado'];
-			$campos="programa_fk=$programa, indicador_fk=$indicador, c1=$c1, c2=$c2, c3=$c3, c4=$c4, c5=$c5, estado_fk=$estado";
+			$campos="programa_fk=$programa, indicador_fk=$indicador, c1='$c1', c2='$c2', c3='$c3', c4='$c4', c5='$c5', estado_fk=$estado";
 			
 		}else{
 			//campos para eliminar 
