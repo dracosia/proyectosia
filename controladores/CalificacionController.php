@@ -21,7 +21,7 @@ class CalificacionController extends BaseController {
 		$modelo=$arrainput["modelo"];
 		
 
-		$sql="SELECT ind.*, '0' as verdaderas, '0' as cantidad
+		$sql="SELECT ind.*, '0' as verdaderas, '0' as cantidad,  '0' as verdaderas2
 				FROM indicadores ind 
 				INNER JOIN aspectos asp ON asp.codigo=ind.aspectos_fk
 				INNER JOIN caracteristicas car ON car.codigo=asp.caracteristicas_fk
@@ -63,6 +63,10 @@ class CalificacionController extends BaseController {
 					if("".$objDato->valor=="SI" || "".$objDato->valor=="0"){
 						$arradatosInd[$ind2]->verdaderas++;
 					}
+					if("".$objDato->valor=="1"){//para el script 6
+						$arradatosInd[$ind2]->verdaderas2++;
+					}
+
 				}
 			}
 			
