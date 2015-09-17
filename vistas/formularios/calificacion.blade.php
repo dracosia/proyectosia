@@ -439,7 +439,7 @@ console.log(valor+"   script "+script);
                 	}
 				}
 
-                if(datos_modelos[i].scripts_fk==7){
+                if(datos_modelos[i].scripts_fk==6){
                     if(datos_modelos[i].cantidad>0){//encuestas
                         porcentaje2=(datos_modelos[i].verdaderas*100)/datos_modelos[i].cantidad;
                     }
