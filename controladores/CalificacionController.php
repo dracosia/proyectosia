@@ -201,6 +201,32 @@ class CalificacionController extends BaseController {
 			
 		}
 
+//ind2121
+		$sql="select ex.*,ind.tipo_indicador_fk as tipo_indicador
+		from ind2121 ex
+		INNER JOIN indicadores ind ON ind.codigo=ex.indicador_fk
+		INNER JOIN aspectos asp ON asp.codigo=ind.aspectos_fk
+		INNER JOIN caracteristicas car ON car.codigo=asp.caracteristicas_fk
+		INNER JOIN factores fac on fac.codigo=car.factores_fk
+		INNER JOIN modelos mo ON mo.codigo=fac.modelo_fk		 
+		where ex.estado_fk=1
+		and fac.modelo_fk=$modelo
+		order by ex.c1 desc";
+
+		$result=DB::select($sql);
+		for($ind=0;$ind<count($result);$ind++){
+			$objDato=$result[$ind];
+			
+			for($ind2=0;$ind2<count($arradatosInd);$ind2++){
+
+				if($objDato->indicador_fk==$arradatosInd[$ind2]->codigo){
+					$arradatosInd[$ind2]->verdaderas++;
+				
+				}
+			}	
+			
+		}
+
 		
 		if($arrainput['tipo_result']=="json"){
 			return Response::json(array("datos"=>$arradatosInd,"status"=>'ok'));
