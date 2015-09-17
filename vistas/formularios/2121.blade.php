@@ -81,15 +81,13 @@
                                         </div>
                                     </div>
 
-                                     <!-- Cohortes -->
+                                    <!-- Aspectos -->
                                      <div class="form-group">
-                                        <label class="col-md-3 control-label">Cohortes</label>
-                                        <div class="col-md-9">                                            
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
-                                                <input type="text" id="fic1" class="form-control"/>
-                                            </div>                                            
-                                            <span class="help-block">Cohortes</span>
+                                        <label class="col-md-3 control-label">Cohorte</label>
+                                        <div class="col-md-9">                                                                               
+                                            <select class="form-control select" data-live-search="true" id="fic1">
+                                                                     
+                                            </select>
                                         </div>
                                     </div>
 
@@ -315,6 +313,7 @@
  <script type="text/javascript">
 
     $( document ).ready(function() {
+	cargar_cohortes();
      //   cargar_listado();        
     });
 
@@ -339,7 +338,23 @@
 
     var datos_modelos=new Object();
 
-   
+   function cargar_cohortes(){
+   	var year_inicial=1990;
+	var year_actual=0;
+	var fecha=new Date();
+	year_actual = fecha.getFullYear();
+	
+	var cadena_cohorte="";
+	for (var i=year_inicial; i<year_actual; i++){
+		var year_cohorte= i+1;
+		cadena_cohorte+='<option value="'+year_cohorte+'-1">'+(year_cohorte)+' - 1</option>';
+		cadena_cohorte+='<option value="'+year_cohorte+'-2">'+(year_cohorte)+' - 2</option>';
+	}
+	console.log(cadena_cohorte);
+   //$("#fic1").html(cadena_cohorte);
+   $("#fic1").html(""+cadena_cohorte).selectpicker('refresh');  
+   }
+
 
     function cargar_listado(){
 

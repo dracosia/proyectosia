@@ -290,7 +290,7 @@
 			calificacion=valor;	
         }  
 console.log(valor+"   script "+script);		
-        if(script==2 || script==29 || script==6){
+        if(script==2 || script==29){
             if(valor<=9.4){
                 calificacion=1;
             }else if(valor>=9.5  && valor<=18.8){
@@ -359,7 +359,25 @@ console.log(valor+"   script "+script);
             }
         }
 
+        if(script==4){
+            if(valor==0){
+                calificacion=1;
+            }else if(valor>=1 && valor<=5){
+                calificacion=3;
+            }else if(valor>=6 && valor <=9){
+                calificacion=5;
+            }else
+			{
+				calificacion=10;
+			}
+				
+			
+        }
+
+
         return calificacion;
+
+
     }
    
 
@@ -450,7 +468,9 @@ console.log(valor+"   script "+script);
 
                 }
 
-                
+                if(datos_modelos[i].scripts_fk==4){//ind2121
+					porcentaje=datos_modelos[i].verdaderas;
+				}
                 
 
                 cadena_tabla+=' <tr>';
