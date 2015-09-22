@@ -317,6 +317,16 @@ console.log(valor+"   script "+script);
 			calificacion=valor;	
         }  
 
+        if(script==5){
+            if(valor<=80){
+                calificacion=10;
+            }else if(valor>=81  && valor<=89){
+                 calificacion=5;
+            }else if(valor>=90){
+                 calificacion=1;
+            }
+        }
+
 
         if(script==7){
             if(valor<5){
@@ -449,6 +459,10 @@ console.log(valor+"   script "+script);
 
 				}else if(datos_modelos[i].tipo_indicador==5){//observacion
 					porcentaje=datos_modelos[i].verdaderas;
+
+
+				}else if(datos_modelos[i].tipo_indicador==7){//Análisis Documental
+					porcentaje=datos_modelos[i].verdaderas;
 					
 				
 				}else{
@@ -457,7 +471,7 @@ console.log(valor+"   script "+script);
                 	}
 				}
 
-                if(datos_modelos[i].scripts_fk==6){
+                if(datos_modelos[i].scripts_fk==7){
                     if(datos_modelos[i].cantidad>0){//encuestas
                         porcentaje2=(datos_modelos[i].verdaderas*100)/datos_modelos[i].cantidad;
                     }
@@ -468,9 +482,11 @@ console.log(valor+"   script "+script);
 
                 }
 
-                if(datos_modelos[i].scripts_fk==4){//ind2121
+                if(datos_modelos[i].scripts_fk==4){//ind2121, ind2122
 					porcentaje=datos_modelos[i].verdaderas;
 				}
+
+
                 
 
                 cadena_tabla+=' <tr>';
