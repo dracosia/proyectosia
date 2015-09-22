@@ -2,7 +2,7 @@
 @section('contenido')   
         <div class="row">
             <div style="margin-left:15px;">
-                <h2>Administración de Indicador 2.2.3.6</h2>
+                <h2>Administración de Indicador 2.2.3.6 - <br />Relación (%) entre inscritos y matriculados</h2>
             </div>
             
             <div class="col-md-4">

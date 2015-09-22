@@ -2,7 +2,7 @@
 @section('contenido')   
         <div class="row">
             <div style="margin-left:15px;">
-                <h2>Administración de Indicador 2.1.2.1</h2>
+                <h2>Administración de Indicador 2.1.2.1 - <br />Porcentaje de estudiantes que ingresaron mediante la aplicación de reglas generales, en las últimas diez cohortes.</h2>
             </div>
             
             <div class="col-md-4">
