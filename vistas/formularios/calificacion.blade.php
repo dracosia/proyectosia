@@ -340,6 +340,49 @@ console.log(valor+"   script "+script);
             }
         }
 
+        if(script==10){
+            if(valor<40){
+                calificacion=10;
+            }else if(valor>=40  && valor<60){
+                 calificacion=5;
+            }else if(valor>=60){
+                 calificacion=1;
+            }
+        }
+
+        if(script==11){
+            if(valor>=30){
+                calificacion=10;
+            }else if(valor>15  && valor<30){
+                 calificacion=5;
+            }else if(valor<=15){
+                 calificacion=1;
+            }
+        }
+
+        if(script==12){
+            if(valor>=15){
+                calificacion=10;
+            }else if(valor>8  && valor<15){
+                 calificacion=5;
+            }else if(valor<=8){
+                 calificacion=1;
+            }
+        }
+
+        if(script==13){
+            if(valor>=20){
+                calificacion=10;
+            }else if(valor>=15  && valor<20){
+                 calificacion=7;
+            }else if(valor>=5  && valor<15){
+                 calificacion=5;
+            }else if(valor<5){
+                 calificacion=1;
+            }
+        }
+
+
         if(script==32){
             if(valor<3){
                 calificacion=1;
